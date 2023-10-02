@@ -41,8 +41,7 @@ app.use((error, requete, reponse, next) => {
 });
 
 mongoose
-.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.f6f9zcc.mongodb
-.net/?retryWrites=true&w=majority`)
+.connect(`mongodb://127.0.0.1:27017`)
 .then(() => {
     app.listen(5000)
     console.log("Connexion à la base de données réussie");
